@@ -9,13 +9,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class EnterEmailTest {
+public class ClickLinksTest {
     protected static WebDriver driver;
 
     @BeforeClass
     public static void setUp(){
         System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
         driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -30,9 +31,10 @@ public class EnterEmailTest {
     }
 
     @Test
-    public void testEnteringEmail() {
+    public void testClickAllLinks() {
         driver.get("https://men-men-s-01.codersguru.pl/");
         HomePage homePage = new HomePage(driver);
-        homePage.enterEmail("test@mail.com");
+        homePage.clickAllLinks();
     }
+
 }
