@@ -4,7 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
 import java.util.ArrayList;
+
+import static org.junit.Assert.*;
 
 public class HomePage extends BasePage {
 
@@ -26,17 +29,31 @@ public class HomePage extends BasePage {
     @FindBy(name = "button")
     private WebElement singInLink;
 
+    @FindBy(xpath = "/html/body/section[3]/div/form/input[2]")
+    private WebElement registrationLink;
+
     @FindBy(xpath = "/html/body/footer/div/div[1]/a[1]")
     private WebElement regulaminLink;
 
-    
+    @FindBy(xpath = "/html/body/footer/div/div[1]/a[2]")
+    private WebElement howItWorks2Link;
 
-    WebElement[] linkList = new WebElement[]{
+    @FindBy(xpath = "/html/body/footer/div/div[2]/a/img")
+    private WebElement facebookLink;
+
+    @FindBy(xpath = "/html/body/footer/div/legal/a")
+    private WebElement codersLabLink;
+
+     WebElement[] linkList = new WebElement[]{
             homePageLink,
             howItWorksLink,
             priceListLink,
             beMentorLink,
-            singInLink
+            singInLink,
+            registrationLink,
+            regulaminLink,
+            howItWorks2Link,
+            facebookLink
     };
 
 
@@ -52,9 +69,45 @@ public class HomePage extends BasePage {
     public void clickAllLinks() {
         for (WebElement temp : linkList) {
             temp.click();
-            homePageLink.click();
+
+            String title = driver.getTitle();
+            //sprawdź czy w tytule zakładki jest słowo Coders
+            assertTrue(title.contains("Coders"));
+            assertFalse(title.contains("Error"));
+
+            driver.navigate().back();
         }
     }
+  /*
+    public void clickOnCodersLabLink() {
+        // złap uchwyt do aktualnego okna
+        String parentHandle = driver.getWindowHandle();
+        // kliknij na codersLabLink i otwórz nowe okno
+        codersLabLink.click();
 
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // przeswitchuj się do otwartego okna
+        for (String winHandle: driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        // sprawdź asercje
+        assertTrue(driver.getTitle().contains("Coders"));
+
+        // zamknij okno
+        driver.close();
+        // wróc do poprzedniego okna
+        driver.switchTo().window(parentHandle);
+    }
+*/
+    public void clickOnRegistrationButton(){
+       registrationLink.click();
+    }
 
 }
+
+

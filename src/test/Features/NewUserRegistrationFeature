@@ -1,0 +1,13 @@
+Feature Register new private user
+  Scenario: Create new private user
+    Given I open coders guru website
+    When I go to registration page
+    And I select private user
+    And I enter email "tester@gmail.com"
+    And I enter name "Jan" surname "Kowalski"
+    And I provide password "123456"
+    And I enter address city "Wrocław" zip code "55-050" street "Ogrodowa" number "43"
+    And I check that I have read terms
+    And I click registration button
+    Then User should be succesfully created
+
