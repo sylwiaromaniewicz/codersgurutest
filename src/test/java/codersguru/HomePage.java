@@ -78,7 +78,7 @@ public class HomePage extends BasePage {
             driver.navigate().back();
         }
     }
-  /*
+
     public void clickOnCodersLabLink() {
         // złap uchwyt do aktualnego okna
         String parentHandle = driver.getWindowHandle();
@@ -103,7 +103,7 @@ public class HomePage extends BasePage {
         // wróc do poprzedniego okna
         driver.switchTo().window(parentHandle);
     }
-*/
+
     public void clickOnRegistrationButton(){
        registrationLink.click();
     }
