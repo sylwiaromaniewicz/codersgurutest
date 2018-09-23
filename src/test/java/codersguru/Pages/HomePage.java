@@ -1,11 +1,10 @@
-package codersguru;
+package codersguru.Pages;
 
+import aCommon.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 

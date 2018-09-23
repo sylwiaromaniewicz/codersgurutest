@@ -1,0 +1,11 @@
+Feature: Find mentor as logged user
+  Scenario: Log in and provide wrong payment options
+    Given I open login coders guru website
+    When I log in as "tester677111779381@gmail.com" user with password "123456"
+    And I pick from dropdown "GIT" and click find mentor
+    And I pick mentor first on the list
+    And I enter problem descriptions as "Nie umiem gita"
+    And I pick first possible date and time and go to payment
+    And I pick credit card payment
+    And Provide CC data as "1323 2332 3232 3123 1231 333" "12/2323" "123" "Jan Kowalski" "tester677111779381@gmail.com"
+    Then Payment should be rejected

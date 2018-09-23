@@ -1,6 +1,7 @@
-package codersguru;
+package codersguru.Tests;
 
-import cucumber.api.PendingException;
+import aCommon.FirefoxBaseTest;
+import codersguru.Pages.RegistrationPage;
 import cucumber.api.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

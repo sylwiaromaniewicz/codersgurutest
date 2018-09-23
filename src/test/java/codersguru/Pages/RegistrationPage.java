@@ -1,10 +1,11 @@
-package codersguru;
+package codersguru.Pages;
 
+import aCommon.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class RegistrationPage  extends BasePage{
+public class RegistrationPage  extends BasePage {
 
     @FindBy(id = "person")
     private WebElement personButtomLink;

@@ -1,4 +1,4 @@
-package codersguru;
+package aCommon;
 
 import org.junit.After;
 import org.junit.AfterClass;

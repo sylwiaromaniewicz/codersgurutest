@@ -1,0 +1,20 @@
+Feature: Register new company user
+  Scenario Outline: Create new private user
+    Given I open coders guru website
+    When I go to registration page
+    And I select company user
+    And I enter email "<mail>"
+    And I enter name "<name>" surname "<surname>"
+    And I provide password "<password>"
+    And I enter address city "<city>" zip code "<zipCode>" street "<street>" number "<number>"
+    And I enter company name "<companyName>"
+    And I enter generated NIP
+    And I check that I have read terms
+    And I click registration button
+    Then User should be succesfully created "<name>"
+
+    Examples:
+      |mail|name|surname|password|city|zipCode|street|number|companyName|
+      |tester6777111779381@gmail.com|Anna|Kowalski|123456|Wrocław|55-050|Ogrodowa|43|CodersLab|
+      |tester1771771398782@gmail.com|Karolina|Nowak|123456|Oława|44-050|Piękna|15|Insert|
+

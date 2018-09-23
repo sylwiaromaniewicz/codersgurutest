@@ -1,5 +1,7 @@
-package codersguru;
+package codersguru.Tests;
 
+import aCommon.FirefoxBaseTest;
+import codersguru.Pages.HomePage;
 import org.junit.Test;
 
 public class EnterEmailTest extends FirefoxBaseTest {

@@ -1,6 +1,9 @@
-package codersguru;
+package codersguru.Tests;
 
-import cucumber.api.PendingException;
+import aCommon.FirefoxBaseTest;
+import codersguru.Pages.HomePage;
+import codersguru.Pages.HomePageUserSingIn;
+import codersguru.Pages.RegistrationPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
