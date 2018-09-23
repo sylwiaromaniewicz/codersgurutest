@@ -6,11 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePageUserSingIn extends HomePage {
 
-
     public HomePageUserSingIn(WebDriver driver){
         super(driver);
     }
-
 
     @FindBy(id = "user-name")
     private WebElement userName;  //Alt + Enter !!! zaimportował się WebElement automatycznie

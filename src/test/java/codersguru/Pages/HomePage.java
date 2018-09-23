@@ -104,7 +104,8 @@ public class HomePage extends BasePage {
     }
 
     public void clickOnRegistrationButton(){
-       registrationLink.click();
+
+        registrationLink.click();
     }
 
 }
