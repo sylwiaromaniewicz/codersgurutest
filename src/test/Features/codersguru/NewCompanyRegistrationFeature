@@ -15,6 +15,6 @@ Feature: Register new company user
 
     Examples:
       |mail|name|surname|password|city|zipCode|street|number|companyName|
-      |tester6777111779381@gmail.com|Anna|Kowalski|123456|Wrocław|55-050|Ogrodowa|43|CodersLab|
-      |tester1771771398782@gmail.com|Karolina|Nowak|123456|Oława|44-050|Piękna|15|Insert|
+      |tester67771116738791@gmail.com|Anna|Kowalski|123456|Wrocław|55-050|Ogrodowa|43|CodersLab|
+      |tester17713981777882@gmail.com|Karolina|Nowak|123456|Oława|44-050|Piękna|15|Insert|
 

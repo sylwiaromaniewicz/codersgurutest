@@ -21,12 +21,13 @@ public class FirefoxBaseTest {
 
     @After
     public void cleanUp(){
+
         driver.manage().deleteAllCookies();
     }
 
     @AfterClass
     public static void tearDown(){
-        driver.close();
+       // driver.close();
 
     }
 

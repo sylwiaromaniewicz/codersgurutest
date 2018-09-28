@@ -30,9 +30,9 @@ public class BookingFlightTest extends FirefoxBaseTest {
     }
 
     @And("^I pick first available flight$")
-    public void iPickFirstAvailableFlight() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iPickFirstAvailableFlight()  {
+        BookingFlightPage bookingFlightPage = new BookingFlightPage(driver);
+        bookingFlightPage.clickOnBookingButton();
     }
 
     @And("^I book as a guest with \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
